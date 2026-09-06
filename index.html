@@ -41,11 +41,13 @@
         <label>Full name<input id="name" autocomplete="name" required placeholder="Your name"></label>
         <label>Email<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
         <label>Phone (optional)<input id="phone" autocomplete="tel" placeholder="Phone number"></label>
+        <label>Payment method<select id="payment" required><option value="">Choose payment</option><option value="BTC">Bitcoin (BTC)</option><option value="XMR">Monero (XMR)</option></select></label>
         <label class="wide">Shipping address<textarea id="address" autocomplete="street-address" required placeholder="Street, city, state, postal code, country"></textarea></label>
         <label class="wide">Order notes (optional)<textarea id="notes" placeholder="Delivery notes or questions"></textarea></label>
       </form>
       <div class="order-preview-wrap">
         <div class="preview-head"><span>LIVE ORDER PREVIEW</span><button id="newOrderNumber" type="button">NEW ORDER #</button></div>
+        <p class="email-instruction">Email the completed order form to <a href="mailto:Heroic@tuta.com">Heroic@tuta.com</a></p>
         <pre id="orderPreview">Add an item to begin your order.</pre>
         <div class="checkout-actions">
           <button class="primary" id="copyOrder" type="button">COPY ORDER FORM</button>

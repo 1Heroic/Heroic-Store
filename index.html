@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse products, build a cart, and generate a ready-to-send order form." />
+  <title>Heroic — Order Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Heroic home"><span>H</span> <i>HEROIC</i></a>
+    <div class="nav-spec">TOKYO CYAN EDITION <b>●</b></div>
+    <button class="cart-trigger" id="cartTrigger" aria-controls="cartPanel">ORDER BAG <b id="cartCount">0</b></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-code">H<br><span>HEROIC</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">HEROIC / VERIFIED INVENTORY</p>
+        <h1>Stand<br><em>apart.</em></h1>
+        <p class="lede">Clear inventory. Verified batches. Build your order and receive a complete, ready-to-send form.</p>
+        <a class="primary" href="#catalog">VIEW INVENTORY <b>→</b></a>
+      </div>
+      <div class="system-strip" aria-label="Store information"><span>COLLECTION<strong>CURRENT</strong></span><span>STATUS<strong>AVAILABLE</strong></span><span>ORDERING<strong>OPEN</strong></span></div>
+    </section>
+
+    <section class="discount-strip" id="discountStrip" aria-label="Order discounts"></section>
+
+    <section class="catalog" id="catalog">
+      <div class="section-head">
+        <div><p class="eyebrow">HEROIC INVENTORY / LIVE BATCHES</p><h2>Available now.</h2></div>
+        <div class="filters" id="filters" aria-label="Product filters"></div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="order-section" id="checkout">
+      <div class="order-intro"><p class="eyebrow">ORDER DETAILS / CHECKOUT</p><h2>Complete your order.</h2><p>Orders over $500 receive 10% off. Orders over $1,000 receive 20% off. Nothing is sent or stored automatically.</p></div>
+      <form id="customerForm" class="customer-form">
+        <label>Full name<input id="name" autocomplete="name" required placeholder="Your name"></label>
+        <label>Email<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>Phone (optional)<input id="phone" autocomplete="tel" placeholder="Phone number"></label>
+        <label class="wide">Shipping address<textarea id="address" autocomplete="street-address" required placeholder="Street, city, state, postal code, country"></textarea></label>
+        <label class="wide">Order notes (optional)<textarea id="notes" placeholder="Delivery notes or questions"></textarea></label>
+      </form>
+      <div class="order-preview-wrap">
+        <div class="preview-head"><span>LIVE ORDER PREVIEW</span><button id="newOrderNumber" type="button">NEW ORDER #</button></div>
+        <pre id="orderPreview">Add an item to begin your order.</pre>
+        <div class="checkout-actions">
+          <button class="primary" id="copyOrder" type="button">COPY ORDER FORM</button>
+          <button class="secondary" id="emailOrder" type="button">OPEN IN EMAIL</button>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head"><h2>Your cart</h2><button id="closeCart" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="totals">
+      <div><span>Subtotal</span><b id="subtotal">$0.00</b></div>
+      <div class="discount"><span>Order discount</span><b id="discount">−$0.00</b></div>
+      <div class="grand"><span>Total</span><b id="total">$0.00</b></div>
+    </div>
+    <a class="primary full" href="#checkout" id="checkoutLink">MAKE ORDER FORM</a>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <footer><span>HEROIC</span><p>Clear ordering. Verified batches. No account required.</p></footer>
+  <script src="EDIT-ME.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
